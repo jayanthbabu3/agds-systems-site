@@ -1,0 +1,280 @@
+@import 'tailwindcss';
+
+/* ─────────────────────────────────────────────────────────────────────────
+   AGDS Systems — tokens.
+   Accent is sampled straight from the client's logo (the ring/mid-tone of
+   its blue gradient, #0161CF — 5.8:1 on ground). A lighter tint of the same
+   hue stands in for "gold" — the brief calls for one or two colours, never
+   a second hue. Archivo for display, Inter for body, IBM Plex Mono for
+   labels/figures.
+   ───────────────────────────────────────────────────────────────────────── */
+@theme static {
+  --color-ground: #f4f5f7;
+  --color-raised: #ffffff;
+  --color-soft: #eef0f4; /* tinted surfaces */
+  --color-line: #d7dae2;
+  --color-accent: #0161cf; /* logo blue — 5.8:1 on ground */
+  --color-accent-dim: #014ea6; /* logo blue, darkened — pressed state */
+  --color-accent-soft: #e1ecf9; /* logo blue, tinted 88% toward white */
+  --color-accent-glow: #016fea; /* the brighter blue at the top of the logo's gradient */
+  --color-gold: #66a0e2; /* logo blue, lightened — not a second hue */
+  --color-ink: #0b1c30; /* headings */
+  --color-body: #454655; /* 7.4:1 */
+  --color-muted: #757687;
+  --color-alert: #ba1a1a;
+
+  --font-display: 'Archivo', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --font-hand: 'Caveat', cursive;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-micro: cubic-bezier(0.33, 1, 0.68, 1);
+
+  --reveal-y: 24px;
+  --entrance-y: 22px;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color-scheme: light;
+  }
+  body {
+    background: var(--color-ground);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    font-weight: 400;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: var(--color-accent);
+    color: #fff;
+  }
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+  button:not(:disabled),
+  [role='button'],
+  summary {
+    cursor: pointer;
+  }
+  input,
+  select,
+  textarea {
+    font-family: inherit;
+  }
+}
+
+/* Display type: Archivo set bold and tight, a grotesque built for large sizes. */
+.display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.022em;
+  line-height: 1.02;
+}
+.display-italic {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* Small label */
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ── Reveal primitives (GSAP stages inline; CSS holds the pre-state) ──── */
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, var(--reveal-y), 0);
+}
+.reveal[data-revealed] {
+  opacity: 1;
+  transform: none;
+}
+html.js [data-entrance] {
+  opacity: 0;
+}
+html.js [data-entrance='rise'] {
+  transform: translate3d(0, var(--entrance-y), 0);
+}
+html.js [data-entrance][data-entered] {
+  opacity: 1;
+  transform: none;
+}
+.split-line {
+  display: block;
+  padding-bottom: 0.12em;
+  margin-bottom: -0.12em;
+}
+
+/* ── The hero stage ───────────────────────────────────────────────────────
+   Copy left, visual right. The visual is feathered into the page, never boxed. */
+.hero-field {
+  background-image:
+    radial-gradient(60% 70% at 78% 40%, color-mix(in oklab, var(--color-accent) 8%, transparent) 0%, transparent 70%),
+    radial-gradient(40% 50% at 10% 90%, color-mix(in oklab, var(--color-gold) 10%, transparent) 0%, transparent 70%),
+    linear-gradient(165deg, var(--color-raised) 0%, var(--color-ground) 45%, var(--color-soft) 100%);
+}
+
+/* Fine square mesh: small enough to read as texture, not a grid. Masked so
+   it's strongest behind the copy and dissolves before the bottom edge. */
+.hero-mesh {
+  background-image:
+    linear-gradient(to right, color-mix(in oklab, var(--color-accent) 6%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--color-accent) 6%, transparent) 1px, transparent 1px);
+  background-size: 26px 26px;
+  mask-image:
+    linear-gradient(to bottom, black 0%, black 55%, transparent 92%),
+    radial-gradient(56% 64% at 68% 42%, transparent 25%, black 82%);
+  mask-composite: intersect;
+  -webkit-mask-composite: source-in;
+}
+
+/* The same fine mesh, symmetric — for centred sections where the hero's
+   off-axis radial cutout (tuned to clear its right-side visual) would read
+   as lopsided instead of considered. */
+.mesh-fade {
+  background-image:
+    linear-gradient(to right, color-mix(in oklab, var(--color-accent) 6%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--color-accent) 6%, transparent) 1px, transparent 1px);
+  background-size: 26px 26px;
+  mask-image: linear-gradient(to bottom, black 0%, black 45%, transparent 90%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 45%, transparent 90%);
+}
+
+/* Small squares drifting over the mesh — the same accent, at rest. */
+@keyframes cell-drift {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50% { transform: translateY(-14px); opacity: 1; }
+}
+.float-cell {
+  position: absolute;
+  border-radius: 4px;
+  animation: cell-drift 7s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+/* ── The orbit diagram (hero mechanism) ─────────────────────────────────── */
+@keyframes dot-pulse {
+  0%, 100% { opacity: 0.35; transform: scale(0.85); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+.orbit-dot {
+  animation: dot-pulse 2.6s ease-in-out infinite;
+}
+
+/* Each practice node breathes on its own offset — a constellation, not a
+   single narrator walking a highlight around the ring. */
+@keyframes node-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.node-float {
+  animation: node-float 5s ease-in-out infinite;
+}
+
+.hand {
+  font-family: var(--font-hand);
+}
+
+/* Near-invisible noise over a flat gradient — kills the banding and gives
+   the surface a tactile, printed feel instead of a vector-flat one. */
+.grain {
+  pointer-events: none;
+  opacity: 0.4;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.05 0 0 0 0 0.08 0 0 0 0 0.2 0 0 0 0.045 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.film-mask {
+  mask-image:
+    radial-gradient(75% 70% at 55% 50%, #000 40%, transparent 100%),
+    linear-gradient(to right, transparent 0%, #000 18%, #000 85%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, #000 14%, #000 84%, transparent 100%);
+  -webkit-mask-image:
+    radial-gradient(75% 70% at 55% 50%, #000 40%, transparent 100%),
+    linear-gradient(to right, transparent 0%, #000 18%, #000 85%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, #000 14%, #000 84%, transparent 100%);
+  mask-composite: intersect;
+  -webkit-mask-composite: source-in;
+}
+
+/* Ken Burns — the two stills drift slowly so the stage never sits dead. */
+@keyframes kb-a {
+  from { transform: scale(1.02) translate3d(0, 0, 0); }
+  to { transform: scale(1.12) translate3d(-1.5%, -1%, 0); }
+}
+@keyframes kb-b {
+  from { transform: scale(1.12) translate3d(1%, 1%, 0); }
+  to { transform: scale(1.02) translate3d(0, 0, 0); }
+}
+
+/* Marquee — a true constant, so linear is right. */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 40s linear infinite;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Cards: a crisp border for the edge, a tight tinted shadow for lift — not
+   the generic grey blur that reads as a smudge, a small, low-opacity,
+   accent-coloured shadow that reads as the card sitting slightly above
+   the page. */
+.card {
+  background: var(--color-raised);
+  border: 1px solid var(--color-line);
+  border-radius: 1rem;
+  box-shadow: 0 1px 2px color-mix(in oklab, var(--color-ink) 4%, transparent),
+    0 10px 24px -16px color-mix(in oklab, var(--color-accent) 25%, transparent);
+  transition: border-color 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out),
+    transform 0.3s var(--ease-out);
+}
+.card:hover {
+  border-color: color-mix(in oklab, var(--color-accent) 40%, var(--color-line));
+  box-shadow: 0 2px 4px color-mix(in oklab, var(--color-ink) 5%, transparent),
+    0 16px 32px -16px color-mix(in oklab, var(--color-accent) 35%, transparent);
+  transform: translateY(-2px);
+}
+
+/* Native details with an animated body */
+details.faq > summary::-webkit-details-marker { display: none; }
+details.faq .faq-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.45s var(--ease-out); }
+details.faq[open] .faq-body { grid-template-rows: 1fr; }
+details.faq .faq-body > div { overflow: hidden; }
+details.faq[open] .faq-icon { transform: rotate(45deg); }
+
+.rail { scrollbar-width: none; touch-action: pan-y; }
+.rail::-webkit-scrollbar { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal, .reveal[data-revealed], html.js [data-entrance], html.js [data-entrance][data-entered] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

@@ -1,0 +1,605 @@
+{
+  "site": {
+    "name": "AGDS",
+    "fullName": "Anthropic Gen Digital Systems Pvt Ltd.",
+    "tagline": "Software Engineering & Applied AI",
+    "city": "Bengaluru, India",
+    "established": 2018,
+    "phone": "+919876543210",
+    "phoneDisplay": "+91 98765 43210",
+    "email": "hello@agdssystems.com",
+    "address": "Anthropic Gen Digital Systems Pvt Ltd., HSR Layout, Bengaluru, Karnataka 560102",
+    "mapUrl": "https://maps.google.com/?q=HSR+Layout+Bengaluru",
+    "counsellingCode": "SOC2 Type II · ISO 27001",
+    "applyUrl": "#contact",
+    "whatsappMessage": "Hi AGDS, I'd like to talk about a software or applied-AI engagement."
+  },
+  "nav": [
+    {
+      "href": "#about",
+      "label": "About"
+    },
+    {
+      "href": "#branches",
+      "label": "Services"
+    },
+    {
+      "href": "#campus",
+      "label": "How We Work"
+    },
+    {
+      "href": "#placements",
+      "label": "Results"
+    },
+    {
+      "href": "#events",
+      "label": "Insights"
+    },
+    {
+      "href": "#contact",
+      "label": "Talk to Us"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Taking new engagements for 2026",
+    "headline": [
+      "We build software",
+      "that moves you forward."
+    ],
+    "sub": "From strategy and architecture to applied AI, product design and dedicated engineering squads — one senior team, from first sketch to production.",
+    "primaryCta": "Start a project",
+    "secondaryCta": "Explore services",
+    "stats": [
+      {
+        "value": 100,
+        "suffix": "+",
+        "label": "Projects delivered"
+      },
+      {
+        "value": 95,
+        "suffix": "%",
+        "label": "Client retention"
+      },
+      {
+        "value": 40,
+        "suffix": "+",
+        "label": "Senior engineers"
+      }
+    ]
+  },
+  "trust": [
+    "SOC2 Type II",
+    "ISO 27001",
+    "AWS Advanced Partner",
+    "GDPR compliant",
+    "99.98% uptime SLA",
+    "Series-funded clients"
+  ],
+  "about": {
+    "title": "Built around the build",
+    "body": "AGDS was started in 2018 by a group of engineers who felt consulting had drifted too far from writing code. Today the same principle holds: every engagement is staffed by senior engineers who ship alongside your team, not a rotating bench billed at senior rates.",
+    "points": [
+      {
+        "title": "Senior-only squads",
+        "body": "Staff and Principal engineers on every engagement, from kickoff to handover. No delegating down."
+      },
+      {
+        "title": "A named lead, not a ticket queue",
+        "body": "Small dedicated pods with one lead who knows your codebase and answers before end of day."
+      },
+      {
+        "title": "Outcome-based scoping",
+        "body": "Fixed-scope or milestone contracts, revisited every quarter as your roadmap changes."
+      }
+    ]
+  },
+  "branches": {
+    "title": "Everything you need, one senior team",
+    "lede": "From the first architecture sketch to the squad that runs it in production — eight practices, staffed by a dedicated pod and a senior lead who ships from week one.",
+    "items": [
+      {
+        "id": "software",
+        "name": "Custom Software Engineering",
+        "short": "Software",
+        "seats": 18,
+        "icon": "code",
+        "body": "Cloud platforms and microservices, built to scale horizontally.",
+        "tags": [
+          "Cloud",
+          "Systems",
+          "APIs"
+        ]
+      },
+      {
+        "id": "ai",
+        "name": "Applied AI & LLM Systems",
+        "short": "Applied AI",
+        "seats": 12,
+        "icon": "brain",
+        "body": "RAG pipelines and autonomous agents, on infrastructure we own.",
+        "tags": [
+          "RAG",
+          "Agents",
+          "MLOps"
+        ]
+      },
+      {
+        "id": "security",
+        "name": "Security & Compliance",
+        "short": "Security",
+        "seats": 6,
+        "icon": "shield",
+        "body": "Threat modelling and audit readiness, built into delivery.",
+        "tags": [
+          "AppSec",
+          "SOC2",
+          "Audits"
+        ]
+      },
+      {
+        "id": "data",
+        "name": "Data & Platform Engineering",
+        "short": "Data",
+        "seats": 9,
+        "icon": "circuit",
+        "body": "Streaming, warehousing and analytics that hold up at scale.",
+        "tags": [
+          "Streaming",
+          "Warehouse",
+          "ETL"
+        ]
+      },
+      {
+        "id": "devops",
+        "name": "DevOps & Cloud Infrastructure",
+        "short": "DevOps",
+        "seats": 8,
+        "icon": "bolt",
+        "body": "Kubernetes, multi-region CI/CD and zero-downtime rollouts.",
+        "tags": [
+          "K8s",
+          "CI/CD",
+          "IaC"
+        ]
+      },
+      {
+        "id": "product",
+        "name": "Product Design & UX",
+        "short": "Design",
+        "seats": 7,
+        "icon": "gear",
+        "body": "Design systems and rapid prototyping for enterprise teams.",
+        "tags": [
+          "Figma",
+          "Systems",
+          "Research"
+        ]
+      },
+      {
+        "id": "consulting",
+        "name": "Technical & Strategic Consulting",
+        "short": "Consulting",
+        "seats": 5,
+        "icon": "building",
+        "body": "Architecture audits and fractional CTO advisory, on demand.",
+        "tags": [
+          "Audits",
+          "CTO",
+          "Roadmaps"
+        ]
+      },
+      {
+        "id": "squads",
+        "name": "Dedicated Engineering Squads",
+        "short": "Squads",
+        "seats": 15,
+        "icon": "network",
+        "body": "Embedded senior teams, live in your stack within 48 hours.",
+        "tags": [
+          "Staffing",
+          "Agile",
+          "Embedded"
+        ]
+      }
+    ]
+  },
+  "campus": {
+    "title": "How we work",
+    "lede": "Distributed across three hubs, in daily contact with every client. Everything a project needs happens inside one shared Slack channel.",
+    "gallery": [
+      {
+        "id": "standups",
+        "src": "",
+        "alt": "Daily standups, always on video",
+        "caption": "Daily standups, always on video",
+        "span": "wide"
+      },
+      {
+        "id": "demos",
+        "src": "",
+        "alt": "Weekly clickable sprint demos",
+        "caption": "Weekly clickable sprint demos"
+      },
+      {
+        "id": "oncall",
+        "src": "",
+        "alt": "Shared on-call rotation",
+        "caption": "Shared on-call rotation"
+      },
+      {
+        "id": "pairing",
+        "src": "",
+        "alt": "Pair programming by default",
+        "caption": "Pair programming by default",
+        "span": "tall"
+      },
+      {
+        "id": "docs",
+        "src": "",
+        "alt": "Architecture decisions, written down",
+        "caption": "Architecture decisions, written down"
+      },
+      {
+        "id": "retros",
+        "src": "",
+        "alt": "Blameless retros, every sprint",
+        "caption": "Blameless retros, every sprint"
+      }
+    ],
+    "facilities": [
+      {
+        "icon": "home",
+        "title": "Remote-first, three hubs",
+        "body": "Bengaluru, Pune and a distributed bench across European timezones, on one delivery calendar."
+      },
+      {
+        "icon": "bus",
+        "title": "Same-day response",
+        "body": "A named lead responds inside four working hours, every engagement, every day."
+      },
+      {
+        "icon": "book",
+        "title": "Documentation-first",
+        "body": "Every architecture decision is recorded before the sprint that implements it starts."
+      },
+      {
+        "icon": "trophy",
+        "title": "94% test coverage baseline",
+        "body": "Enforced in CI, not aspired to in a slide deck."
+      }
+    ]
+  },
+  "placements": {
+    "title": "Results that start in week two",
+    "lede": "The delivery desk runs architecture review, staffing and a working demo from the second week, so handover is the end of a process, not the start of one.",
+    "stats": [
+      {
+        "value": 64,
+        "suffix": "%",
+        "label": "Average latency cut"
+      },
+      {
+        "value": 8,
+        "suffix": " wks",
+        "label": "Average time to MVP"
+      },
+      {
+        "value": 99.98,
+        "suffix": "%",
+        "label": "Uptime across client infra",
+        "decimals": 2
+      },
+      {
+        "value": 1240,
+        "suffix": "",
+        "label": "PRs shipped in 2025"
+      }
+    ],
+    "recent": [
+      {
+        "name": "HyperScale Capital",
+        "branch": "FinTech",
+        "company": "Applied AI",
+        "role": "Inference re-architecture",
+        "package": "-64% latency",
+        "photo": ""
+      },
+      {
+        "name": "FinVox Global",
+        "branch": "Payments",
+        "company": "Dedicated Squad",
+        "role": "Multi-tenant SaaS MVP",
+        "package": "6 wks early",
+        "photo": ""
+      },
+      {
+        "name": "Nexus Health",
+        "branch": "HealthTech",
+        "company": "Applied AI",
+        "role": "Diagnostic ML pipeline",
+        "package": "FDA-ready",
+        "photo": ""
+      },
+      {
+        "name": "Terra Cloud",
+        "branch": "Infrastructure",
+        "company": "DevOps",
+        "role": "Multi-region K8s rollout",
+        "package": "Zero downtime",
+        "photo": ""
+      },
+      {
+        "name": "Datalink AI",
+        "branch": "Data Platform",
+        "company": "Data Engineering",
+        "role": "Real-time event pipeline",
+        "package": "10x throughput",
+        "photo": ""
+      },
+      {
+        "name": "Quantum Ventures",
+        "branch": "B2B SaaS",
+        "company": "Consulting",
+        "role": "Architecture audit",
+        "package": "-40% cloud cost",
+        "photo": ""
+      }
+    ],
+    "recruiters": [
+      {
+        "name": "FinVox",
+        "slug": "finvox"
+      },
+      {
+        "name": "Hyperscale",
+        "slug": "hyperscale"
+      },
+      {
+        "name": "Nexus Health",
+        "slug": "nexus-health"
+      },
+      {
+        "name": "Terra Cloud",
+        "slug": "terra-cloud"
+      },
+      {
+        "name": "Datalink AI",
+        "slug": "datalink-ai"
+      },
+      {
+        "name": "Quantum Ventures",
+        "slug": "quantum-ventures"
+      },
+      {
+        "name": "Vertex",
+        "slug": "vertex"
+      },
+      {
+        "name": "Omicron Data",
+        "slug": "omicron-data"
+      }
+    ],
+    "byBranch": [
+      {
+        "branch": "Software",
+        "placed": 98
+      },
+      {
+        "branch": "Applied AI",
+        "placed": 96
+      },
+      {
+        "branch": "DevOps",
+        "placed": 95
+      },
+      {
+        "branch": "Data",
+        "placed": 94
+      },
+      {
+        "branch": "Security",
+        "placed": 93
+      },
+      {
+        "branch": "Design",
+        "placed": 90
+      },
+      {
+        "branch": "Consulting",
+        "placed": 88
+      },
+      {
+        "branch": "Squads",
+        "placed": 97
+      }
+    ],
+    "hrQuote": {
+      "quote": "AGDS's engineers came into the sprint already having read our codebase. That is rare at this level.",
+      "name": "Meghana Rao",
+      "role": "Head of Engineering, HyperScale Capital"
+    }
+  },
+  "leadership": {
+    "title": "The people running the place",
+    "message": "Every quarter I ask clients the same question: would you re-engage us without putting it out to bid again? Come watch a sprint demo and you will see why the answer is usually yes.",
+    "people": [
+      {
+        "name": "Aditi Rao",
+        "role": "Co-Founder & CEO",
+        "creds": "Ex-Amazon, 14 years in distributed systems",
+        "quote": "A codebase should outlast the engagement that built it.",
+        "photo": ""
+      },
+      {
+        "name": "Karthik Iyer",
+        "role": "Co-Founder & CTO",
+        "creds": "Ex-Google, ACM published",
+        "quote": "Our job is to make sure no client is ever waiting on us to understand their own system.",
+        "photo": ""
+      },
+      {
+        "name": "Meera Nambiar",
+        "role": "Head of Applied AI",
+        "creds": "PhD (IISc), ex-DeepMind resident",
+        "quote": "Production AI is 10% model and 90% the pipeline around it.",
+        "photo": ""
+      }
+    ]
+  },
+  "events": {
+    "title": "This year at AGDS",
+    "items": [
+      {
+        "date": "14 Mar 2026",
+        "tag": "Release",
+        "title": "Agent Toolkit v2 ships",
+        "body": "A rewritten orchestration layer cuts agent latency 30% and adds first-class evals.",
+        "image": ""
+      },
+      {
+        "date": "22 Jan 2026",
+        "tag": "Case Study",
+        "title": "Buildathon: 36 hours, one production RAG pipeline",
+        "body": "Our internal hack week shipped a support-ticket triage agent now running for two clients.",
+        "image": ""
+      },
+      {
+        "date": "08 Dec 2025",
+        "tag": "Milestone",
+        "title": "SOC2 Type II recertified",
+        "body": "Zero exceptions across the second consecutive audit cycle.",
+        "image": ""
+      },
+      {
+        "date": "19 Nov 2025",
+        "tag": "Talk",
+        "title": "AGDS at the Bengaluru AI Meetup",
+        "body": "Our Head of Applied AI spoke on evaluation-driven development for agent systems.",
+        "image": ""
+      }
+    ],
+    "upcoming": [
+      {
+        "date": "12 Oct 2026",
+        "title": "Open engineering office hours",
+        "body": "Bring an architecture problem, leave with a whiteboard's worth of options. Free, monthly."
+      },
+      {
+        "date": "20 Nov 2026",
+        "title": "Applied AI workshop registrations open",
+        "body": "A hands-on day building a production RAG pipeline, for engineering teams."
+      },
+      {
+        "date": "Mar 2027",
+        "title": "AGDS annual engineering report",
+        "body": "Benchmarks and lessons from the year's production AI deployments."
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "quote": "AGDS rebuilt our core inference engine and cut our AWS spend in half within a single sprint cycle.",
+      "name": "Marcus Vance",
+      "role": "CTO, HyperScale Capital",
+      "photo": ""
+    },
+    {
+      "quote": "Five years on I still call them first. The habit of finishing what we start came from working alongside their squad.",
+      "name": "Elena Rostova",
+      "role": "VP Product, FinVox",
+      "photo": ""
+    },
+    {
+      "quote": "As a non-technical founder I wanted honest timelines and no surprise invoices. AGDS gave me both without being asked.",
+      "name": "Priya Menon",
+      "role": "Founder, Nexus Health",
+      "photo": ""
+    }
+  ],
+  "admissions": {
+    "title": "Three steps to a kickoff",
+    "steps": [
+      {
+        "title": "Book a discovery call",
+        "body": "Thirty minutes with a Principal Engineer, not a salesperson. We diagnose before we scope."
+      },
+      {
+        "title": "Get a scoped proposal",
+        "body": "Fixed-scope or milestone pricing, written in plain terms, inside 48 hours."
+      },
+      {
+        "title": "Kick off with your squad",
+        "body": "Meet your named lead, get repo access, ship the first PR inside the first week."
+      }
+    ],
+    "fees": [
+      {
+        "item": "Fixed-scope project",
+        "amount": "From $18,000",
+        "note": "Defined deliverable, fixed timeline"
+      },
+      {
+        "item": "Dedicated squad (per engineer/month)",
+        "amount": "$9,500",
+        "note": "Embedded, full-time, month-to-month"
+      },
+      {
+        "item": "Fractional CTO advisory (per month)",
+        "amount": "$4,200",
+        "note": "Architecture review and roadmap, 2 days/week"
+      },
+      {
+        "item": "Applied AI pilot (4 weeks)",
+        "amount": "From $22,000",
+        "note": "Proof of concept to a working demo"
+      }
+    ],
+    "cutoffs": [
+      {
+        "branch": "Fixed-Scope",
+        "rank": "Kickoff in 5 business days"
+      },
+      {
+        "branch": "Dedicated Squad",
+        "rank": "Staffed in 10 business days"
+      },
+      {
+        "branch": "Advisory",
+        "rank": "First session in 48 hours"
+      },
+      {
+        "branch": "AI Pilot",
+        "rank": "Kickoff in 3 business days"
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": "How is this different from a typical dev agency?",
+      "a": "Every engineer on your engagement is Staff or Principal level — no junior handoffs, no bench swap mid-sprint. You keep the same team from kickoff to handover."
+    },
+    {
+      "q": "Who owns the code and IP?",
+      "a": "You do, from the first commit. There is no lock-in clause and no retained license — repositories, models and documentation transfer in full."
+    },
+    {
+      "q": "Can you work inside our existing stack and tools?",
+      "a": "Yes. We plug into your GitHub, Jira and Slack inside 48 hours rather than asking you to adopt ours."
+    },
+    {
+      "q": "Do you take equity or only cash engagements?",
+      "a": "Cash by default. We consider equity-inclusive arrangements for early-stage teams on a case-by-case basis."
+    }
+  ],
+  "contact": {
+    "title": "Talk to the delivery desk",
+    "lede": "Fill this in and it opens WhatsApp with your project details written out. A Principal Engineer replies during business hours.",
+    "routes": [
+      "Bengaluru",
+      "Pune",
+      "London",
+      "San Francisco",
+      "Remote — EU timezone"
+    ]
+  }
+}

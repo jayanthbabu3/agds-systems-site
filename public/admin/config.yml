@@ -1,0 +1,72 @@
+# Sveltia CMS — the client edits content/site.json through this.
+#
+# Setup, once per project:
+#   1. repo: <owner>/<name> below
+#   2. GitHub OAuth: either Netlify's free git-gateway or a Cloudflare Worker
+#      running sveltia-cms-auth (free tier is plenty)
+#   3. invite the client to the repo as a collaborator
+#   4. they visit yoursite.com/admin
+#
+# Only fields the client should touch are listed. Structural copy stays in code.
+
+backend:
+  name: github
+  repo: OWNER/REPO # TODO
+  branch: main
+
+media_folder: public/work
+public_folder: /work
+
+collections:
+  - name: site
+    label: Site
+    files:
+      - name: content
+        label: Website content
+        file: content/site.json
+        fields:
+          - name: site
+            label: Contact details
+            widget: object
+            fields:
+              - { name: name, label: Business name, widget: string }
+              - { name: role, label: What you do, widget: string }
+              - { name: city, label: City, widget: string }
+              - { name: basedLine, label: Location line, widget: string }
+              - {
+                  name: phone,
+                  label: Phone (international, e.g. +919000000000),
+                  widget: string,
+                  pattern: ['^\+\d{10,15}$', 'Must start with + and country code'],
+                }
+              - { name: phoneDisplay, label: Phone as shown, widget: string }
+              - { name: email, label: Email, widget: string }
+              - { name: instagram, label: Instagram URL, widget: string }
+              - { name: whatsappMessage, label: Default WhatsApp message, widget: text }
+
+          - name: hero
+            label: Hero
+            widget: object
+            fields:
+              - { name: eyebrow, label: Availability line, widget: string }
+              - { name: sub, label: Intro paragraph, widget: text }
+              - { name: primaryCta, label: Main button, widget: string }
+              - { name: secondaryCta, label: Second button, widget: string }
+              - name: stats
+                label: Numbers
+                widget: list
+                max: 4
+                fields:
+                  - { name: value, label: Number, widget: number, value_type: int }
+                  - { name: suffix, label: After the number, widget: string, required: false }
+                  - { name: label, label: Caption, widget: string }
+
+          - name: services
+            label: Services
+            widget: list
+            fields:
+              - { name: id, label: ID (do not change), widget: string }
+              - { name: title, label: Title, widget: string }
+              - { name: price, label: Price, widget: string }
+              - { name: body, label: Description, widget: text }
+              - { name: includes, label: What's included, widget: list, max: 4 }

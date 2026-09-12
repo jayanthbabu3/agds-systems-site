@@ -1,0 +1,8 @@
+node_modules
+dist
+.vercel
+tsconfig.tsbuildinfo
+.DS_Store
+gen/*.png
+gen/*.mp4
+gen/*.jpg
